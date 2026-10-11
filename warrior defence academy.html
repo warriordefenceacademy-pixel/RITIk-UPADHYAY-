@@ -1,0 +1,342 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warriors Defence Academy | Best NDA & CDS Coaching</title>
+    <style>
+        /* Modern CSS Variables */
+        :root {
+            --primary-blue: #0f172a;
+            --secondary-blue: #1d4ed8;
+            --accent-orange: #ea580c;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --success-green: #16a34a;
+        }
+
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--light-bg); 
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navratri & Diwali Offer Bar */
+        .offer-bar {
+            background: linear-gradient(90deg, #d97706, #ea580c, #dc2626);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
+        }
+        .offer-bar span { color: #fde047; font-weight: 900; }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.85; }
+            100% { opacity: 1; }
+        }
+
+        /* Top Bar */
+        .top-bar { 
+            background-color: var(--primary-blue); 
+            color: #cbd5e1; 
+            padding: 10px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 13px; 
+        }
+        .top-bar a { color: #fbbf24; text-decoration: none; font-weight: bold; font-size: 15px; }
+
+        /* Header */
+        .header { 
+            background-color: var(--white); 
+            padding: 15px 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header img { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; 
+            border: 3px solid var(--accent-orange);
+            object-fit: cover;
+        }
+        .header-text h1 { margin: 0; font-size: 26px; color: var(--primary-blue); text-transform: uppercase; font-weight: 900; }
+        .header-text p { margin: 2px 0 0 0; font-size: 14px; color: var(--text-gray); font-weight: 600; }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('main-photo.jpg') center/cover;
+            color: white;
+            text-align: center; 
+            padding: 70px 20px; 
+        }
+        .hero h2 { font-size: 38px; margin-bottom: 15px; font-weight: 900; line-height: 1.2; }
+        .hero h2 span { color: #fbbf24; }
+        .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px auto; color: #e2e8f0; line-height: 1.6; }
+        .btn-primary { 
+            background: var(--accent-orange); color: white; padding: 15px 35px; font-size: 18px; font-weight: bold; 
+            border-radius: 8px; text-decoration: none; display: inline-block; transition: 0.3s; border: none; cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.4);
+        }
+        .btn-primary:hover { background: #c2410c; transform: translateY(-3px); }
+
+        /* 20,000+ Selections Milestone (NEW) */
+        .milestone-section {
+            background: linear-gradient(135deg, #065f46, #047857);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
+        }
+        .milestone-section h2 { margin: 0; font-size: 48px; font-weight: 900; color: #fef08a; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .milestone-section p { margin: 10px 0 0 0; font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* WDA NSAT Scholarship Section */
+        .scholarship-section {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            margin: 40px auto; max-width: 900px; border-radius: 16px; padding: 35px 25px; text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); position: relative; border: 2px solid #60a5fa;
+        }
+        .scholarship-section h2 { margin: 0 0 10px 0; font-size: 34px; color: #fbbf24; font-weight: 900; }
+        .scholarship-section h3 { margin: 0 0 15px 0; font-size: 20px; font-weight: 600; }
+        .scholarship-section p { font-size: 17px; margin-bottom: 25px; color: #dbeafe; line-height: 1.5; }
+        .highlight-badge { background: #fbbf24; color: #92400e; padding: 6px 18px; border-radius: 20px; font-weight: bold; font-size: 14px; display: inline-block; margin-bottom: 15px; }
+
+        /* Container & Grid */
+        .container { max-width: 1050px; margin: 0 auto; padding: 0 20px 50px 20px; }
+        .section-title { text-align: center; color: var(--primary-blue); margin: 50px 0 35px 0; font-size: 30px; font-weight: 900; text-transform: uppercase; }
+        .section-title::after { content: ''; display: block; width: 70px; height: 5px; background: var(--accent-orange); margin: 12px auto 0 auto; border-radius: 3px; }
+
+        /* Batches */
+        .batch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .batch-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 5px solid var(--secondary-blue); transition: 0.3s; position: relative; overflow: hidden; }
+        .batch-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); }
+        .batch-card h3 { color: var(--primary-blue); font-size: 24px; margin: 0 0 10px 0; font-weight: 800; }
+        .batch-card p { color: var(--text-gray); margin-bottom: 15px; line-height: 1.6; font-size: 15px; }
+        .price-box { background: #fff7ed; border: 1px dashed #fdba74; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .price-box .old-price { text-decoration: line-through; color: #94a3b8; font-size: 15px; }
+        .price-box .new-price { color: #b91c1c; font-size: 26px; font-weight: 900; display: block; margin-top: 5px; }
+        .price-box .reg-fee { font-size: 14px; color: var(--text-dark); margin-top: 8px; font-weight: 700; background: #fef08a; display: inline-block; padding: 4px 10px; border-radius: 4px; }
+        .btn-secondary { background: var(--secondary-blue); color: white; border: none; padding: 14px; width: 100%; font-size: 17px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+        .btn-secondary:hover { background: #1e3a8a; }
+
+        /* Media Section (Gallery & Video) */
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .media-card { background: white; padding: 12px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+        .media-card:hover { transform: scale(1.02); }
+        .media-card img, .media-card video { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+        .media-card p { text-align: center; font-weight: 700; color: var(--primary-blue); margin: 12px 0 5px 0; font-size: 16px; }
+
+        /* Faculty Grid */
+        .faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .faculty-card { background: white; padding: 25px 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); text-align: center; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .faculty-card:hover { border-color: var(--secondary-blue); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .faculty-card h4 { margin: 0 0 8px 0; color: var(--primary-blue); font-size: 19px; font-weight: 800; }
+        .faculty-card .role { color: var(--text-gray); font-size: 14px; margin-bottom: 12px; display: block; font-weight: 500; }
+        .subject-badge { background: #e0f2fe; color: #0369a1; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 800; text-transform: uppercase; }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
+            display: flex; align-items: center; justify-content: center; text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        /* Professional Footer */
+        .footer { background: #020617; color: #94a3b8; padding: 50px 20px 30px 20px; font-size: 15px; }
+        .footer-content { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; border-bottom: 1px solid #1e293b; padding-bottom: 30px; margin-bottom: 20px; }
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-col h3 { color: white; font-size: 18px; margin-bottom: 15px; }
+        .footer-col p { line-height: 1.6; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #94a3b8; text-decoration: none; transition: 0.2s; }
+        .footer-col ul li a:hover { color: var(--accent-orange); padding-left: 5px; }
+        .footer-bottom { text-align: center; font-size: 14px; }
+        .footer-bottom span { color: white; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .header { flex-direction: column; text-align: center; }
+            .top-bar { flex-direction: column; text-align: center; gap: 8px; }
+            .hero h2 { font-size: 30px; }
+            .milestone-section h2 { font-size: 38px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navratri Offer Bar with Diwali Teaser -->
+    <div class="offer-bar">
+        🌸 NAVRATRI MAHA-OFFER: Flat 70% OFF on Live Batches! <span>(🎁 Mega Diwali Surprise Coming Soon...)</span> 🌸
+    </div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div>📍 Location: Kapoor Thala, Lucknow, UP</div>
+        <div>📞 Admission Helpline: <a href="tel:881790961">881790961</a> (Tap to call)</div>
+    </div>
+    
+    <!-- Main Header -->
+    <div class="header">
+        <img src="1000020835.jpg" alt="Warriors Defence Academy Logo">
+        <div class="header-text">
+            <h1>Warriors Defence Academy</h1>
+            <p>Director: Gulab Singh | India's Premier Defence Institute</p>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Achieve Your Defence Dreams With <span>India's Best</span></h2>
+        <p>Prepare with top defence experts, ex-SSB panelists, and rigorous physical training. Your journey to the Armed Forces begins here.</p>
+        <a href="#batches" class="btn-primary">Explore Live Batches</a>
+    </div>
+
+    <!-- 20,000+ Selections Milestone -->
+    <div class="milestone-section">
+        <h2>20,000+</h2>
+        <p>Proud Selections in NDA & CDS across India</p>
+    </div>
+    
+    <div class="container">
+        <!-- WDA NSAT Scholarship Section -->
+        <div class="scholarship-section">
+            <div class="highlight-badge">🏆 Biggest Scholarship Test of 2027</div>
+            <h2>WDA - NSAT</h2>
+            <h3>(Warriors Defence Academy National Scholarship & Admission Test)</h3>
+            <p>Are you a bright student? Take the WDA-NSAT and prove your potential. Score high and win up to <strong>90% Scholarship</strong> on our classroom and live programs!</p>
+            <button class="btn-primary" style="background: #fbbf24; color: #92400e; box-shadow: none;">Register for WDA-NSAT (Free)</button>
+        </div>
+
+        <!-- Our Live Batches -->
+        <h2 class="section-title" id="batches">Our Live Batches</h2>
+        <div class="batch-grid">
+            <div class="batch-card">
+                <h3>1. Shaurya Batch</h3>
+                <p>Complete Foundation & Advanced Preparation for NDA / CDS Exams.</p>
+                <div class="price-box">
+                    <span class="old-price">Total Fee: ₹5,000</span>
+                    <span class="new-price">Now: ₹1,500</span>
+                    <div class="reg-fee">Navratri Special Reg. Fee: ₹500 Only</div>
+                </div>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+            <div class="batch-card">
+                <h3>2. Marcos Batch</h3>
+                <p>Advanced Training & Physical Preparation for ultimate endurance.</p>
+                <div class="price-box">
+                    <span class="old-price">Total Fee: ₹5,000</span>
+                    <span class="new-price">Now: ₹1,500</span>
+                    <div class="reg-fee">Navratri Special Reg. Fee: ₹500 Only</div>
+                </div>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+            <div class="batch-card">
+                <h3>3. Prarambh Batch</h3>
+                <p>Foundation Course strictly designed for absolute beginners.</p>
+                <div class="price-box">
+                    <span class="old-price">Total Fee: ₹4,000</span>
+                    <span class="new-price">Now: ₹1,200</span>
+                    <div class="reg-fee">Navratri Special Reg. Fee: ₹500 Only</div>
+                </div>
+                <button class="btn-secondary">Enroll Now</button>
+            </div>
+        </div>
+
+        <!-- Academy Glimpses & Videos -->
+        <h2 class="section-title">Academy Glimpses & Training</h2>
+        <div class="media-grid">
+            <div class="media-card">
+                <img src="ground.jpg" alt="Ground Training">
+                <p>Rigorous Ground Training</p>
+            </div>
+            <div class="media-card">
+                <img src="ssb-panel.jpg" alt="Live SSB Session">
+                <p>Live SSB Interview Prep</p>
+            </div>
+            <div class="media-card">
+                <video controls>
+                    <source src="training-video.mp4" type="video/mp4">
+                </video>
+                <p>Watch Our Training Action</p>
+            </div>
+        </div>
+
+        <!-- SSB Panel & Faculty Grid (Same as before but with better CSS) -->
+        <h2 class="section-title">Expert SSB Panel</h2>
+        <div class="faculty-grid">
+            <div class="faculty-card"><h4>Cdr. Vikram Yadav</h4><span class="role">Ex-SSB Interviewer</span><span class="subject-badge">SSB Expert</span></div>
+            <div class="faculty-card"><h4>Cdr. Rajveer Ranjan</h4><span class="role">GTO Expert</span><span class="subject-badge">SSB Expert</span></div>
+            <div class="faculty-card"><h4>Dr. Natrajan</h4><span class="role">Psychologist</span><span class="subject-badge">SSB Expert</span></div>
+            <div class="faculty-card"><h4>K.P. Thakur</h4><span class="role">Personality Dev.</span><span class="subject-badge">SSB Expert</span></div>
+        </div>
+
+        <h2 class="section-title">Our Expert Faculty</h2>
+        <div class="faculty-grid">
+            <div class="faculty-card"><h4>Arpit Choudhary Sir</h4><span class="role">SSB Guide</span><span class="subject-badge">NDA Maths</span></div>
+            <div class="faculty-card"><h4>Neeraj Bainsla Sir</h4><span class="role">Senior Faculty</span><span class="subject-badge">NDA Maths</span></div>
+            <div class="faculty-card"><h4>Sandeep Sir</h4><span class="role">Senior Faculty</span><span class="subject-badge">CDS Maths</span></div>
+            <div class="faculty-card"><h4>Sanjeev Thakur Sir</h4><span class="role">Language Expert</span><span class="subject-badge">English</span></div>
+            <div class="faculty-card"><h4>Anuj Chouhan Sir</h4><span class="role">Language Expert</span><span class="subject-badge">English</span></div>
+            <div class="faculty-card"><h4>Khan Sir</h4><span class="role">GS Expert</span><span class="subject-badge">General Studies</span></div>
+            <div class="faculty-card"><h4>Sumit Kumar Sir</h4><span class="role">GS Expert</span><span class="subject-badge">General Studies</span></div>
+            <div class="faculty-card"><h4>Shyam Sharma Sir</h4><span class="role">Science Expert</span><span class="subject-badge">Science</span></div>
+            <div class="faculty-card"><h4>Reshma Khan Mam</h4><span class="role">Science Expert</span><span class="subject-badge">Science</span></div>
+        </div>
+    </div>
+
+    <!-- Professional Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>About WDA</h3>
+                <p>Warriors Defence Academy is India's leading coaching institute for NDA, CDS, AFCAT, and SSB Interviews, delivering record-breaking selections every year.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Results</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>📍 Kapoor Thala, Lucknow, UP</p>
+                <p>📞 +91 881790961</p>
+                <p>✉️ admission@warriorsdefence.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 <span>Warriors Defence Academy</span>, Lucknow. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/91881790961" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        💬
+    </a>
+
+</body>
+</html>
